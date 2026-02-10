@@ -1,0 +1,16 @@
+.git
+.github
+.gitignore
+*.md
+!artifacts/README.md
+!data/README.md
+tests
+.pytest_cache
+__pycache__
+*.pyc
+.venv
+venv
+.env
+*.log
+data/raw
+data/processed

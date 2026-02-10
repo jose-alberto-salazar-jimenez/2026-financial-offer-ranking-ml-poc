@@ -1,0 +1,23 @@
+# Streamlit / serving app config
+app:
+  title: "Financial Offer Propensity & Ranking"
+  port: 8501
+  page_icon: "📊"
+
+# Synthetic offer catalog for ranking demo (label -> display name)
+offers:
+  - id: "term_deposit"
+    label: "Term Deposit"
+    description: "Fixed-term savings product"
+  - id: "personal_loan"
+    label: "Personal Loan"
+    description: "Unsecured personal loan"
+  - id: "credit_card"
+    label: "Credit Card"
+    description: "Revolving credit line"
+  - id: "mortgage"
+    label: "Mortgage"
+    description: "Home loan product"
+  - id: "insurance"
+    label: "Insurance Bundle"
+    description: "Life + property insurance"

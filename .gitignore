@@ -1,0 +1,54 @@
+# Data and artifacts (large/generated)
+data/raw/
+data/processed/
+artifacts/model/
+artifacts/metrics/
+artifacts/baselines/
+*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+.pytest_cache/
+.coverage
+htmlcov/
+tests/_drift_test_tmp/

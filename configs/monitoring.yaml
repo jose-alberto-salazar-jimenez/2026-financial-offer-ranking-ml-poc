@@ -1,0 +1,23 @@
+# Drift and data quality thresholds
+drift:
+  psi_threshold: 0.2
+  ks_threshold: 0.1
+  score_psi_threshold: 0.15
+  # Features to monitor (subset for speed)
+  monitor_features:
+    - age
+    - balance
+    - duration
+    - campaign
+    - pdays
+
+data_quality:
+  max_missing_rate: 0.05
+  age_min: 0
+  age_max: 120
+  balance_min: -10000  # allow small negative
+  balance_max: 10000000
+
+alerts:
+  on_drift: true
+  on_quality_fail: true

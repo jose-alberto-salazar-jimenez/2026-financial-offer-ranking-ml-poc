@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Optional: use local artifacts instead of image-built
+      - ./artifacts:/app/artifacts
+    environment:
+      - ARTIFACTS_DIR=/app/artifacts
