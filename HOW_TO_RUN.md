@@ -330,8 +330,23 @@ Then open http://localhost:8501.
 
 ---
 
+## Jupyter notebook (explore-first narrative)
+
+A notebook **demo_build_and_evaluate.ipynb** in the `notebooks/` folder shows the project as if it was **built in a notebook first**, then productionized:
+
+- Load data, EDA (target balance, numerical/categorical summaries, simple plots).
+- Feature engineering (same as production: scale + one-hot).
+- Train Logistic Regression and Gradient Boosting.
+- Evaluate (ROC-AUC, precision, recall, calibration, confusion matrix).
+- Short wrap-up mapping the notebook to `src/pipelines/`, serving, and the Streamlit app.
+
+**To run it:** From repo root run `make data`, then open `notebooks/demo_build_and_evaluate.ipynb` in Jupyter or VS Code. The notebook switches to the repo root so the data path and any future `src` imports work.
+
+---
+
 ## Summary
 
 - **Containerize the model:** Build the Docker image; the image runs download → train → evaluate → package, so the model lives inside the image. Running the container starts Streamlit and uses that model for inference.
 - **Use it in the Streamlit app:** The app loads the model from `artifacts/model/` and runs inference when you click “Get propensity & ranking.”
 - **Evaluate / train / see how it works:** Use `make train`, `make evaluate`, `make package`, then read `artifacts/metrics/` and `artifacts/model_card.md`. Run `make run` to try the app locally, or run the same app in Docker for the showcase.
+- **Show the “build first, then productionize” story:** Run the notebook `notebooks/demo_build_and_evaluate.ipynb` to walk through EDA, training, and evaluation; then point to the codebase as the production version of that workflow.
